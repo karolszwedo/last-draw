@@ -13,7 +13,7 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 - [x] Dwa prostokąty naprzeciw siebie i napis „Ready…”.
 - [x] Po losowej pauzie napis zmienia się na „FIRE!”.
-- [ ] Spacja po „FIRE!” → wyświetla czas reakcji.
+- [x] Spacja po „FIRE!” → wyświetla czas reakcji.
 - [ ] Spacja przed „FIRE!” → „Too early!” (falstart).
 - [ ] Przeciwnik strzela po swoim czasie → „You win” / „You lose”.
 - [ ] Klawisz restartu → nowa runda.
