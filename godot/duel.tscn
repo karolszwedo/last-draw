@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://d2ffpintj8j4x"]
 
+[ext_resource type="Script" uid="uid://c1l61mrh1vt7t" path="res://duel.gd" id="1_qus8e"]
+
 [node name="Duel" type="Node2D" unique_id=620716475]
+script = ExtResource("1_qus8e")
 
 [node name="Player" type="ColorRect" parent="." unique_id=1367048893]
 offset_left = 200.0
