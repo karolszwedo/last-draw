@@ -20,7 +20,8 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 ## Etap 2 — tryb 1 gracza
 
-- [ ] 5 przeciwników po kolei, każdy szybszy, linijka tekstu przed pojedynkiem.
+- [x] 5 przeciwników po kolei, każdy szybszy; 2 życia.
+- [ ] Linijka tekstu o przeciwniku przed pojedynkiem.
 - [ ] Ekran wygranej (pokonany szef) i przegranej.
 - [ ] Rekord czasu reakcji zapisany na dysku i widoczny po ponownym uruchomieniu.
 

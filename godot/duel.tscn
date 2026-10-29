@@ -26,3 +26,10 @@ offset_right = 722.0
 offset_bottom = 188.0
 theme_override_font_sizes/font_size = 64
 text = "Ready..."
+
+[node name="Info" type="Label" parent="." unique_id=2083294017]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 32

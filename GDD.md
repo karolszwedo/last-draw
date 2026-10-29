@@ -35,6 +35,8 @@ Cel nauki: przejść cały cykl gry od GDD do wydania na itch.io; nauczyć się 
 - 5 przeciwników po kolei, każdy szybszy. Przed pojedynkiem jedna linijka tekstu o przeciwniku.
 - Przeciwnik „strzela” po swoim czasie reakcji (z lekkim losowym rozrzutem). Propozycja na start:
   0,60 → 0,48 → 0,38 → 0,30 → 0,24 s (szef). Do dostrojenia w graniu.
+- 2 życia: pierwsza przegrana (także falstart) → ten sam przeciwnik jeszcze raz; druga → koniec gry,
+  powrót do pierwszego przeciwnika (decyzja Karola, 29.10.2026).
 - Pokonanie szefa = wygrana gra. Rekord = najlepszy czas reakcji, zapisany na dysku.
 
 **2 graczy**
@@ -69,5 +71,3 @@ Cel nauki: przejść cały cykl gry od GDD do wydania na itch.io; nauczyć się 
 ## Otwarte pytania
 
 - Imiona i charaktery 5 przeciwników.
-- Przegrana z przeciwnikiem w trybie 1 gracza: próbujesz tego samego jeszcze raz czy wracasz do pierwszego?
-  (propozycja: ten sam jeszcze raz, licznik prób na koniec).
