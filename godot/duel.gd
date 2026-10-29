@@ -13,18 +13,20 @@ func _ready():
 				var enemy_time = randf_range(0.55, 0.65)
 				await get_tree().create_timer(enemy_time).timeout
 				if state == "fire":
-						state = "done"
-						$Message.text = "%.3f s - You lose" % enemy_time
-						$Player.hide()
+						end_round("%.3f s - You lose" % enemy_time, $Player)
 
 func _unhandled_input(event):
-		if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
-				if state == "ready":
-						state = "done"
-						$Message.text = "Too early! You lose"
-						$Player.hide()
-				elif state == "fire":
-						state = "done"
-						var reaction = (Time.get_ticks_msec() - fire_time) / 1000.0
-						$Message.text = "%.3f s - You win!" % reaction
-						$Enemy.hide()
+		if event is InputEventKey and event.pressed:
+				if event.keycode == KEY_SPACE:
+						if state == "ready":
+								end_round("Too early! You lose", $Player)
+						elif state == "fire":
+								var reaction = (Time.get_ticks_msec() - fire_time) / 1000.0
+								end_round("%.3f s - You win!" % reaction, $Enemy)
+				elif event.keycode == KEY_R and state == "done":
+						get_tree().reload_current_scene()
+
+func end_round(text, loser):
+		state = "done"
+		$Message.text = text + "\n[R] restart"
+		loser.hide()

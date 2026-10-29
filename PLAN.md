@@ -16,7 +16,7 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 - [x] Spacja po „FIRE!” → wyświetla czas reakcji.
 - [x] Spacja przed „FIRE!” → „Too early!” (falstart).
 - [x] Przeciwnik strzela po swoim czasie → „You win” / „You lose”.
-- [ ] Klawisz restartu → nowa runda.
+- [x] Klawisz restartu (R) → nowa runda.
 
 ## Etap 2 — tryb 1 gracza
 
