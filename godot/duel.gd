@@ -1,6 +1,14 @@
 extends Node2D
 
 const ENEMY_TIMES = [0.60, 0.48, 0.38, 0.30, 0.24]
+const ENEMY_NAMES = ["Slow Joe", "Dusty Pete", "Rattlesnake Rosa", "Deacon Graves", "The Undertaker"]
+const ENEMY_LINES = [
+		"Drunk since noon. Still dangerous.",
+		"Never lost a duel. Never fought one either.",
+		"Bites before you see her move.",
+		"Reads your last rites while you draw.",
+		"Already measured you for a coffin.",
+]
 
 static var enemy_index = 0
 static var lives = 2
@@ -50,7 +58,7 @@ func lose(text):
 		end_round(text, $Player)
 
 func show_info():
-		$Info.text = "Bandit %d/5    Lives: %d" % [enemy_index + 1, lives]
+		$Info.text = "%s (%d/5)    Lives: %d\n\"%s\"" % [ENEMY_NAMES[enemy_index], enemy_index + 1, lives, ENEMY_LINES[enemy_index]]
 
 func end_round(text, loser):
 		state = "done"

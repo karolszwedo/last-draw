@@ -37,6 +37,12 @@ Cel nauki: przejść cały cykl gry od GDD do wydania na itch.io; nauczyć się 
   0,60 → 0,48 → 0,38 → 0,30 → 0,24 s (szef). Do dostrojenia w graniu.
 - 2 życia: pierwsza przegrana (także falstart) → ten sam przeciwnik jeszcze raz; druga → koniec gry,
   powrót do pierwszego przeciwnika (decyzja Karola, 29.10.2026).
+- Przeciwnicy (imię + linijka, wybór Karola 29.10.2026):
+  1. Slow Joe — "Drunk since noon. Still dangerous."
+  2. Dusty Pete — "Never lost a duel. Never fought one either."
+  3. Rattlesnake Rosa — "Bites before you see her move."
+  4. Deacon Graves — "Reads your last rites while you draw."
+  5. The Undertaker (szef) — "Already measured you for a coffin."
 - Pokonanie szefa = wygrana gra. Rekord = najlepszy czas reakcji, zapisany na dysku.
 
 **2 graczy**
@@ -70,4 +76,4 @@ Cel nauki: przejść cały cykl gry od GDD do wydania na itch.io; nauczyć się 
 
 ## Otwarte pytania
 
-- Imiona i charaktery 5 przeciwników.
+- (brak)
