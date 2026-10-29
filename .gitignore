@@ -1,0 +1,5 @@
+# Pliki robocze Godota (odtwarzane automatycznie)
+.godot/
+
+# Eksporty gry (wrzucamy na itch.io, nie do repo)
+export/
