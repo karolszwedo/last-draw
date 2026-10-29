@@ -5,8 +5,8 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 ## Etap 0 — przygotowanie
 
-- [ ] Prywatne repo na GitHubie (`karolszwedo/last-draw`), Git LFS na grafikę i dźwięk.
-- [ ] Projekt Godota w `godot\`, renderer **Kompatybilny** (żeby działało w przeglądarce).
+- [x] Prywatne repo na GitHubie (`karolszwedo/last-draw`), Git LFS na grafikę i dźwięk.
+- [x] Projekt Godota w `godot\`, renderer **Kompatybilny** (żeby działało w przeglądarce).
 - [ ] Wybór paczki pixel art (postacie + tło westernu) i dźwięków → wpis do `ASSETY.md`.
 
 ## Etap 1 — rdzeń pojedynku (szare prostokąty)
