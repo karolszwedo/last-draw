@@ -33,7 +33,7 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 ## Etap 4 — menu
 
-- [ ] Ekran startowy: 1 gracz / 2 graczy, powrót do menu po meczu.
+- [x] Ekran startowy: 1 gracz / 2 graczy, powrót do menu po meczu (Esc).
 
 ## Etap 5 — grafika i dźwięk
 

@@ -30,6 +30,10 @@ func _unhandled_input(event):
 				left_score = 0
 				right_score = 0
 			get_tree().reload_current_scene()
+		elif event.keycode == KEY_ESCAPE:
+			left_score = 0
+			right_score = 0
+			get_tree().change_scene_to_file("res://menu.tscn")
 
 func _process(_delta):
 	if state == "ready":
@@ -60,7 +64,7 @@ func end_round(text, winner):
 		$Left.hide()
 	show_score()
 	if match_over():
-		$Message.text = text + "\n%s WINS THE MATCH!\n[R] new match" % winner.to_upper()
+		$Message.text = text + "\n%s WINS THE MATCH!\n[R] new match    [Esc] menu" % winner.to_upper()
 	else:
 		$Message.text = text + "\n[R] next round"
 

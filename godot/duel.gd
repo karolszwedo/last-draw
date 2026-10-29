@@ -51,6 +51,10 @@ func _unhandled_input(event):
 				enemy_index = 0
 				lives = 2
 			get_tree().reload_current_scene()
+		elif event.keycode == KEY_ESCAPE:
+			enemy_index = 0
+			lives = 2
+			get_tree().change_scene_to_file("res://menu.tscn")
 
 func win(text):
 	enemy_index += 1
@@ -80,7 +84,7 @@ func end_game(title, detail):
 	$Player.hide()
 	$Enemy.hide()
 	$Info.text = detail + "\n" + best_text()
-	$Message.text = title + "\n[R] play again"
+	$Message.text = title + "\n[R] play again\n[Esc] menu"
 
 func best_text():
 	if best == 0.0:
