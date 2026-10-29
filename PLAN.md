@@ -29,7 +29,7 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 - [x] A (lewy) i L (prawy), kto pierwszy po sygnale, wygrywa rundę.
 - [x] Falstart = runda dla przeciwnika; remis = powtórka.
-- [ ] Mecz do 3 wygranych, ekran zwycięzcy.
+- [x] Mecz do 3 wygranych, ekran zwycięzcy.
 
 ## Etap 4 — menu
 
