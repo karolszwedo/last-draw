@@ -47,15 +47,17 @@ func _unhandled_input(event):
 func win(text):
 		enemy_index += 1
 		if enemy_index == ENEMY_TIMES.size():
-				text = "You beat them all!"
-		end_round(text, $Enemy)
+				end_game("YOU WIN!", "The Undertaker is dead. The town is yours.")
+		else:
+				end_round(text, $Enemy)
 
 func lose(text):
 		lives -= 1
 		if lives == 0:
-				text = "Game over"
-		show_info()
-		end_round(text, $Player)
+				end_game("GAME OVER", "Lost to %s (%d/5)" % [ENEMY_NAMES[enemy_index], enemy_index + 1])
+		else:
+				show_info()
+				end_round(text, $Player)
 
 func show_info():
 		$Info.text = "%s (%d/5)    Lives: %d\n\"%s\"" % [ENEMY_NAMES[enemy_index], enemy_index + 1, lives, ENEMY_LINES[enemy_index]]
@@ -64,3 +66,10 @@ func end_round(text, loser):
 		state = "done"
 		$Message.text = text + "\n[R] continue"
 		loser.hide()
+
+func end_game(title, detail):
+		state = "done"
+		$Player.hide()
+		$Enemy.hide()
+		$Info.text = detail
+		$Message.text = title + "\n[R] play again"
