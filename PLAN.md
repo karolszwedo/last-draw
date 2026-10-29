@@ -11,7 +11,7 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 ## Etap 1 — rdzeń pojedynku (szare prostokąty)
 
-- [ ] Dwa prostokąty naprzeciw siebie i napis „Ready…”.
+- [x] Dwa prostokąty naprzeciw siebie i napis „Ready…”.
 - [ ] Po losowej pauzie napis zmienia się na „FIRE!”.
 - [ ] Spacja po „FIRE!” → wyświetla czas reakcji.
 - [ ] Spacja przed „FIRE!” → „Too early!” (falstart).
