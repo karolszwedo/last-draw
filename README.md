@@ -133,3 +133,7 @@ ASSETY.md           every asset with its author and license
 
 The art, music and fonts belong to their authors and are used under their licenses
 (details in `ASSETY.md`).
+
+The original art packs are in `godot/assets/linkninja/` and `godot/assets/yeehaw/` only so the
+project can be opened and rebuilt. **If you want to use them, please download them from the
+authors' pages linked above.**

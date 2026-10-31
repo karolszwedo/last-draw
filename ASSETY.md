@@ -40,4 +40,8 @@ Wybór Karola, 31.10.2026.
 | `godot/assets/tytul/daleko.png`, `srodek.png`, `blisko.png` | warstwy ruchomego tła ekranu tytułowego, złożone z YEEHAW (skały, kaktusy, sklep, saloon, bank) |
 | `godot/assets/tytul/napis.png`, `opcje.png` | „LAST DRAW” krojem Rye i opcje krojem Silkscreen, przerobione na piksele (obrys, cień, kolory z YEEHAW) |
 
+Oryginalne paczki LinkNinja i YEEHAW leżą w repo z notką `README.md` w ich folderach: „chcesz użyć — pobierz
+ze strony autora” + link (31.10.2026, pomysł Karola). Strony autorów nie zabraniają ani wprost nie pozwalają
+trzymać plików w publicznym repo; notka kieruje ludzi do autorów.
+
 Podpis w grze (mile widziany, niewymagany): przy wydaniu dodać „Art: LinkNinja, CURSED OFFERINGS” w README i na itch.io.
