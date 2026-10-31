@@ -17,13 +17,13 @@ position = Vector2(240, 459)
 scale = Vector2(3, 3)
 texture = ExtResource("2_rsfa2")
 flip_h = true
-hframes = 12
+hframes = 16
 
 [node name="Enemy" type="Sprite2D" parent="." unique_id=77209241]
 position = Vector2(912, 459)
 scale = Vector2(3, 3)
 texture = ExtResource("2_rsfa2")
-hframes = 12
+hframes = 16
 
 [node name="Message" type="Label" parent="." unique_id=749100797]
 offset_left = 480.0

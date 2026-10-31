@@ -15,6 +15,6 @@ Robi je przepis `narzedzia/sklej_grafike.py` (uruchomienie opisane w pliku).
 | Plik | Z czego | Co zmienione |
 |---|---|---|
 | `godot/assets/tlo_ulica.png` (384×216, w grze ×3) | YEEHAW: niebo i skały, kaktusy, saloon i pas ziemi z przykładowej ulicy | złożone w jeden kadr, saloon pośrodku, pas piasku na dole na napisy |
-| `godot/assets/kowboj.png` (12 klatek 64×64) | LinkNinja: strzał (5 klatek) + pada (7 klatek) | czarny obrys; klatka 0 służy jako „stoi” (oryginalna animacja „stoi” jest przodem, nie pasuje) |
+| `godot/assets/kowboj.png` (16 klatek 64×64) | LinkNinja: strzał (5 klatek) + pierwsze 4 klatki padania | czarny obrys; klatka 0 służy jako „stoi” (oryginalna animacja „stoi” jest przodem, nie pasuje); leżący bez kapki i opuszczony o 2 px; okrągłą kałużę zastąpiła własna płaska (7 klatek) |
 
 Podpis w grze (mile widziany, niewymagany): przy wydaniu dodać „Art: LinkNinja, CURSED OFFERINGS” w README i na itch.io.

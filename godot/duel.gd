@@ -61,31 +61,37 @@ func _unhandled_input(event):
 
 func win(text):
 	enemy_index += 1
+	shoot($Player, $Enemy)
 	if enemy_index == ENEMY_TIMES.size():
 		end_game("YOU WIN!", "The Undertaker is dead. The town is yours.")
 	else:
-		end_round(text, $Enemy)
+		end_round(text)
 
 func lose(text):
 	lives -= 1
+	shoot($Enemy, $Player)
 	if lives == 0:
 		end_game("GAME OVER", "Lost to %s (%d/5)" % [ENEMY_NAMES[enemy_index], enemy_index + 1])
 	else:
 		show_info()
-		end_round(text, $Player)
+		end_round(text)
+
+# Klatki w kowboj.png: 0 = stoi, 1-4 = strzela, 5-8 = pada, 9-15 = rośnie kałuża.
+func shoot(winner, loser):
+	var tween = create_tween()
+	tween.tween_property(winner, "frame", 4, 0.25).from(1)
+	tween.tween_property(loser, "frame", 8, 0.4).from(5)
+	tween.tween_property(loser, "frame", 15, 1.5).from(9)
 
 func show_info():
 	$Info.text = "%s (%d/5)    Lives: %d    %s\n\"%s\"" % [ENEMY_NAMES[enemy_index], enemy_index + 1, lives, best_text(), ENEMY_LINES[enemy_index]]
 
-func end_round(text, loser):
+func end_round(text):
 	state = "done"
 	$Message.text = text + "\n[R] continue"
-	loser.hide()
 
 func end_game(title, detail):
 	state = "done"
-	$Player.hide()
-	$Enemy.hide()
 	$Info.text = detail + "\n" + best_text()
 	$Message.text = title + "\n[R] play again\n[Esc] menu"
 
