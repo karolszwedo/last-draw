@@ -8,7 +8,8 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 - [x] Prywatne repo na GitHubie (`karolszwedo/last-draw`), Git LFS na grafikę i dźwięk.
 - [x] Projekt Godota w `godot\`, renderer **Kompatybilny** (żeby działało w przeglądarce).
 - [x] Wybór paczki pixel art (postacie + tło westernu) → wpis do `ASSETY.md` (31.10.2026).
-- [ ] Wybór dźwięków (dzwon, strzał, wiatr, muzyka) → wpis do `ASSETY.md`.
+- [x] Dźwięki dzwonu, strzału i wiatru — własne 8-bit z `narzedzia/zrob_dzwieki.py` (31.10.2026).
+- [ ] Wybór muzyki 8-bit w klimacie westernu → wpis do `ASSETY.md`.
 
 ## Etap 1 — rdzeń pojedynku (szare prostokąty)
 
@@ -41,7 +42,8 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 - [x] Tło ulicy i stojące postacie w trybie 1 gracza (w miejsce prostokątów).
 - [x] Animacja strzału i padania zamiast znikania (1 gracz), płaska kałuża.
 - [x] To samo w trybie 2 graczy.
-- [ ] Dzwon, strzał, wiatr; muzyka cichnie przed sygnałem.
+- [x] Dzwon, strzał, wiatr w obu trybach.
+- [ ] Muzyka w tle, cichnie przed sygnałem.
 - [ ] Toczący się krzak w czasie czekania.
 
 ## Etap 6 — wydanie

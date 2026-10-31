@@ -17,4 +17,15 @@ Robi je przepis `narzedzia/sklej_grafike.py` (uruchomienie opisane w pliku).
 | `godot/assets/tlo_ulica.png` (384×216, w grze ×3) | YEEHAW: niebo i skały, kaktusy, saloon i pas ziemi z przykładowej ulicy | złożone w jeden kadr, saloon pośrodku, pas piasku na dole na napisy |
 | `godot/assets/kowboj.png` (16 klatek 64×64) | LinkNinja: strzał (5 klatek) + pierwsze 4 klatki padania | czarny obrys; klatka 0 służy jako „stoi” (oryginalna animacja „stoi” jest przodem, nie pasuje); leżący bez kapki i opuszczony o 2 px; okrągłą kałużę zastąpiła własna płaska (7 klatek) |
 
+## Dźwięki własne
+
+Wygenerowane przepisem `narzedzia/zrob_dzwieki.py` (styl 8-bit, fale jak w NES). Nasze, bez cudzej licencji.
+Wybór Karola, 31.10.2026.
+
+| Plik | Co | Wersja z przepisu |
+|---|---|---|
+| `godot/assets/dzwieki/dzwon.wav` | sygnał „FIRE!” — wysoki, krótki „dzyń” | `dzwon_1_ding` |
+| `godot/assets/dzwieki/strzal.wav` | strzał z echem jak w kanionie | `strzal_2_z_echem` |
+| `godot/assets/dzwieki/wiatr.wav` | wiatr z cichym gwizdem, pętla 6 s | `wiatr_2_szum_z_gwizdem` |
+
 Podpis w grze (mile widziany, niewymagany): przy wydaniu dodać „Art: LinkNinja, CURSED OFFERINGS” w README i na itch.io.

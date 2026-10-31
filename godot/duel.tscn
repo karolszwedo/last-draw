@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://c1l61mrh1vt7t" path="res://duel.gd" id="1_qus8e"]
 [ext_resource type="Texture2D" uid="uid://b6lwf0wgex3lg" path="res://assets/kowboj.png" id="2_rsfa2"]
 [ext_resource type="Texture2D" uid="uid://c8nv0hnt5xab" path="res://assets/tlo_ulica.png" id="3_j65gr"]
+[ext_resource type="AudioStream" uid="uid://ba4kgyfnghhtk" path="res://assets/dzwieki/dzwon.wav" id="4_118py"]
+[ext_resource type="AudioStream" uid="uid://cpt1t2a0dofhe" path="res://assets/dzwieki/strzal.wav" id="5_l4435"]
+[ext_resource type="AudioStream" uid="uid://cgepu0d7gy02u" path="res://assets/dzwieki/wiatr.wav" id="6_u5tlf"]
 
 [node name="Duel" type="Node2D" unique_id=620716475]
 script = ExtResource("1_qus8e")
@@ -39,3 +42,14 @@ offset_top = 20.0
 offset_right = 60.0
 offset_bottom = 43.0
 theme_override_font_sizes/font_size = 32
+
+[node name="Bell" type="AudioStreamPlayer2D" parent="." unique_id=1464150890]
+stream = ExtResource("4_118py")
+
+[node name="Shot" type="AudioStreamPlayer2D" parent="." unique_id=1952666639]
+stream = ExtResource("5_l4435")
+
+[node name="Wind" type="AudioStreamPlayer2D" parent="." unique_id=1698657102]
+stream = ExtResource("6_u5tlf")
+volume_db = -12.0
+autoplay = true

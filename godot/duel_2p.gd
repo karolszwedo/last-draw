@@ -20,6 +20,7 @@ func _ready():
 	if state == "ready":
 		state = "fire"
 		$Message.text = "FIRE!"
+		$Bell.play()
 		fire_time = Time.get_ticks_msec()
 
 func _unhandled_input(event):
@@ -73,6 +74,7 @@ func end_round(text, winner):
 
 # Klatki w kowboj.png: 0 = stoi, 1-4 = strzela, 5-8 = pada, 9-15 = rośnie kałuża.
 func shoot(winner, loser):
+	$Shot.play()
 	var tween = create_tween()
 	tween.tween_property(winner, "frame", 4, 0.25).from(1)
 	tween.tween_property(loser, "frame", 8, 0.4).from(5)
