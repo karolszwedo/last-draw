@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://c1l61mrh1vt7t" path="res://duel.gd" id="1_qus8e"]
 [ext_resource type="Texture2D" uid="uid://b6lwf0wgex3lg" path="res://assets/kowboj.png" id="2_rsfa2"]
 [ext_resource type="Texture2D" uid="uid://c8nv0hnt5xab" path="res://assets/tlo_ulica.png" id="3_j65gr"]
+[ext_resource type="Texture2D" uid="uid://huca3q0jidxx" path="res://assets/krzak.png" id="3_u5tlf"]
 [ext_resource type="AudioStream" uid="uid://ba4kgyfnghhtk" path="res://assets/dzwieki/dzwon.wav" id="4_118py"]
+[ext_resource type="Script" uid="uid://cbvengps82wau" path="res://krzak.gd" id="4_yb55v"]
 [ext_resource type="AudioStream" uid="uid://cpt1t2a0dofhe" path="res://assets/dzwieki/strzal.wav" id="5_l4435"]
 [ext_resource type="AudioStream" uid="uid://cgepu0d7gy02u" path="res://assets/dzwieki/wiatr.wav" id="6_u5tlf"]
 
@@ -14,6 +16,13 @@ script = ExtResource("1_qus8e")
 scale = Vector2(3, 3)
 texture = ExtResource("3_j65gr")
 centered = false
+
+[node name="Tumbleweed" type="Sprite2D" parent="." unique_id=1537286489]
+position = Vector2(-40, 507)
+scale = Vector2(3, 3)
+texture = ExtResource("3_u5tlf")
+hframes = 8
+script = ExtResource("4_yb55v")
 
 [node name="Player" type="Sprite2D" parent="." unique_id=1039584557]
 position = Vector2(240, 459)

@@ -44,7 +44,7 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 - [x] To samo w trybie 2 graczy.
 - [x] Dzwon, strzał, wiatr w obu trybach.
 - [x] Muzyka w tle (autoload `Music`), cichnie przed sygnałem; po strzale wraca, a wiatr cichnie.
-- [ ] Toczący się krzak w czasie czekania.
+- [x] Toczący się krzak w czasie czekania (własny rysunek, `krzak.gd`).
 
 ## Etap 6 — wydanie
 

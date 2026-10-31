@@ -1,6 +1,7 @@
 # Przepis na grafikę Last Draw: skleja tło ulicy i arkusz kowboja z pobranych paczek.
 # Uruchomienie (z folderu 01-last-draw):  python -P narzedzia/sklej_grafike.py
-# Wynik: godot/assets/tlo_ulica.png (384x216) i godot/assets/kowboj.png (16 klatek 64x64).
+# Wynik: godot/assets/tlo_ulica.png (384x216), godot/assets/kowboj.png (16 klatek 64x64)
+#        i godot/assets/krzak.png (8 klatek 16x16, własny rysunek).
 from PIL import Image
 
 ASSETS = 'godot/assets/'
@@ -116,6 +117,40 @@ for i, k in enumerate(wszystkie):
     arkusz.paste(k, (i * 64, 0))
 arkusz.save(ASSETS + 'kowboj.png')
 print('klatek w kowboj.png:', len(wszystkie))
+
+# --- toczący się krzak (własny): kula splątanych gałązek, 8 klatek obrotu po 45 stopni ---
+import random
+from PIL import ImageDraw
+
+def krzak(seed=21, galazki=16):
+    random.seed(seed)                               # ten sam „los” = ten sam krzak przy każdym uruchomieniu
+    S = 16
+    im = Image.new('RGBA', (S, S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    kolory = ((130, 85, 40, 255), (200, 150, 85, 255), (200, 150, 85, 255), (240, 205, 140, 255), (240, 205, 140, 255))
+    for _ in range(galazki):                        # gałązki = łuki o losowej wielkości i miejscu
+        r = random.randint(2, 6); lim = 7 - r
+        cx = 7.5 + random.uniform(-lim, lim); cy = 7.5 + random.uniform(-lim, lim)
+        a = random.randint(0, 359)
+        d.arc((round(cx - r), round(cy - r), round(cx + r), round(cy + r)), a, a + random.randint(80, 220),
+              fill=random.choice(kolory))
+    wynik = im.copy()                               # czarny obrys tylko na zewnątrz kuli
+    for y in range(S):
+        for x in range(S):
+            if im.getpixel((x, y))[3] == 0 and (x - 7.5) ** 2 + (y - 7.5) ** 2 > 25 and any(
+                    0 <= x + dx < S and 0 <= y + dy < S and im.getpixel((x + dx, y + dy))[3]
+                    for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))):
+                wynik.putpixel((x, y), (0, 0, 0, 255))
+    return wynik
+
+k = krzak()
+pasek = Image.new('RGBA', (16 * 8, 16), (0, 0, 0, 0))
+for i in range(8):                                  # obrót zgodnie z zegarem = toczy się w prawo
+    obrot = k.rotate(-45 * i, resample=Image.NEAREST, center=(7.5, 7.5))
+    pasek.paste(obrot, (i * 16, 0))
+pasek.save(ASSETS + 'krzak.png')
+dol = k.getbbox()[3]
+print('krzak: dół w klatce y =', dol, '-> pozycja y w grze =', 3 * G + 3 - 3 * (dol - 8))
 
 stopy = wszystkie[0].getbbox()[3]
 print('kowboj: dół postaci w klatce y =', stopy, '-> pozycja y w grze =', 3 * G + 3 - 3 * (stopy - 32))

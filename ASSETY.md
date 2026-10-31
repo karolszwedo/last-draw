@@ -30,4 +30,10 @@ Wybór Karola, 31.10.2026.
 | `godot/assets/dzwieki/strzal.wav` | strzał z echem jak w kanionie | `strzal_2_z_echem` |
 | `godot/assets/dzwieki/wiatr.wav` | wiatr z cichym gwizdem, pętla 6 s | `wiatr_2_szum_z_gwizdem` |
 
+## Grafika własna
+
+| Plik | Co |
+|---|---|
+| `godot/assets/krzak.png` (8 klatek 16×16, w grze ×3) | toczący się krzak, narysowany przepisem `narzedzia/sklej_grafike.py` (31.10.2026) |
+
 Podpis w grze (mile widziany, niewymagany): przy wydaniu dodać „Art: LinkNinja, CURSED OFFERINGS” w README i na itch.io.
