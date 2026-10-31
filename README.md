@@ -137,3 +137,8 @@ The art, music and fonts belong to their authors and are used under their licens
 The original art packs are in `godot/assets/linkninja/` and `godot/assets/yeehaw/` only so the
 project can be opened and rebuilt. **If you want to use them, please download them from the
 authors' pages linked above.**
+
+## License
+
+The code is under the [MIT License](LICENSE). The license covers the code only, not the art,
+music and fonts listed in Credits.
