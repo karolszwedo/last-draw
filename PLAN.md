@@ -60,4 +60,5 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
       okno 1152×648; gra uruchamia się na stronie. Teksty i decyzje w `ITCH.md`.
 - [x] 3 zrzuty ekranu (F12 z Godota, `zrzuty.gd`) w `materialy/zrzuty/`.
 - [ ] README w repo.
-- [ ] Publikacja (Draft → Public) — kiedy Karol zdecyduje.
+- [x] Publikacja: strona **publiczna** od 31.10.2026 — https://charlesonthewave.itch.io/last-draw
+      (sprawdzona z zewnątrz: opis, 3 zrzuty, tagi, „Run game”, etykieta „AI Assisted”).
