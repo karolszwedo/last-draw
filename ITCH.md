@@ -32,29 +32,31 @@ Teksty po angielsku, bo gra jest po angielsku. Uwagi po polsku są dla nas, ich 
 
 ## Description (do wklejenia)
 
-```
-High noon. Main street. Two gunslingers and one bell.
+Wersja 2 (31.10.2026, uwaga Karola): ciepły wstęp od Karola, bez długich myślników (typowy ślad tekstu AI).
 
-Wait for the bell, then draw. Shoot too early and you lose. Shoot too late — you lose too.
+```
+Hi, I'm Karol! Last Draw is my very first game. I've wanted to make games for as long as I can remember, and now I finally did, so this little western is a small dream come true for me. It's short and simple, but I had a lot of fun making it, and I hope you have fun playing it.
+
+High noon. Main street. Two gunslingers and one bell. Wait for the bell, then draw. Shoot too early and you lose. Shoot too late and you lose too.
 
 MODES
-• 1 Player — face five outlaws, each faster than the last. You have two lives. Beat The Undertaker and the town is yours. Your best reaction time is saved.
-• 2 Players — one keyboard, two gunslingers. First to three wins.
+• 1 Player: face five outlaws, each faster than the last. You have two lives. Beat The Undertaker and the town is yours. Your best reaction time is saved.
+• 2 Players: one keyboard, two gunslingers. First to three wins.
 
 CONTROLS
 • 1 Player: SPACE to shoot
 • 2 Players: A (left) and L (right)
-• R — next round / play again
-• Esc — back to menu
+• R: next round / play again
+• Esc: back to menu
 
-My first game, made with Godot 4.7 as a learning project. Built with help from an AI coding assistant.
+Made with Godot 4.7, with help from an AI coding assistant.
 
 CREDITS
-• Cowboy sprite — LinkNinja (linkninja.itch.io/pixelart-cowboy)
-• Western tileset "YEEHAW!" — CURSED OFFERINGS (cursed-offerings.itch.io/yeehaw)
-• Music "Lasso Lady" — congusbongus, CC0 (opengameart.org/content/lasso-lady-seamless-loop)
+• Cowboy sprite: LinkNinja (linkninja.itch.io/pixelart-cowboy)
+• Western tileset "YEEHAW!": CURSED OFFERINGS (cursed-offerings.itch.io/yeehaw)
+• Music "Lasso Lady": congusbongus, CC0 (opengameart.org/content/lasso-lady-seamless-loop)
 • Fonts: Rye by Nicole Fally, Silkscreen by Jason Kottke (SIL Open Font License)
-• Sound effects, tumbleweed and title screen — made for this game
+• Sound effects, tumbleweed and title screen: made for this game
 ```
 
 ## Ujawnienie AI — do decyzji Karola
