@@ -22,7 +22,6 @@ Music="*uid://be0t8r0uejl5a"
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [physics]
 
