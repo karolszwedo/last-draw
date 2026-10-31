@@ -9,7 +9,7 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 - [x] Projekt Godota w `godot\`, renderer **Kompatybilny** (żeby działało w przeglądarce).
 - [x] Wybór paczki pixel art (postacie + tło westernu) → wpis do `ASSETY.md` (31.10.2026).
 - [x] Dźwięki dzwonu, strzału i wiatru — własne 8-bit z `narzedzia/zrob_dzwieki.py` (31.10.2026).
-- [ ] Wybór muzyki 8-bit w klimacie westernu → wpis do `ASSETY.md`.
+- [x] Muzyka 8-bit w klimacie westernu: „Lasso Lady” (CC0) → `ASSETY.md` (31.10.2026).
 
 ## Etap 1 — rdzeń pojedynku (szare prostokąty)
 
@@ -43,7 +43,7 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 - [x] Animacja strzału i padania zamiast znikania (1 gracz), płaska kałuża.
 - [x] To samo w trybie 2 graczy.
 - [x] Dzwon, strzał, wiatr w obu trybach.
-- [ ] Muzyka w tle, cichnie przed sygnałem.
+- [x] Muzyka w tle (autoload `Music`), cichnie przed sygnałem; po strzale wraca, a wiatr cichnie.
 - [ ] Toczący się krzak w czasie czekania.
 
 ## Etap 6 — wydanie

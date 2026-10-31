@@ -18,6 +18,7 @@ Cel nauki: przejść cały cykl gry od GDD do wydania na itch.io; nauczyć się 
 | Grafika | 2D, pixel art z gotowej darmowej paczki |
 | Paczki (31.10.2026) | kowboj LinkNinja (obaj gracze ten sam, lewy odbity) + tło YEEHAW!; szczegóły w `ASSETY.md` |
 | Kadr (31.10.2026) | spokojny: niebo, skały, kaktusy, **saloon pośrodku**, kowboje po bokach; pas piasku na dole na napisy. Bez półek i drabin z przykładowej ulicy (za dużo na ekranie) |
+| Dźwięk (31.10.2026) | styl **retro 8-bit**: własne efekty (dzwon „dzyń”, strzał z echem, wiatr z gwizdem) + muzyka „Lasso Lady”. Muzyka gra w menu, cichnie przy „Ready…”, wraca po strzale; wiatr tylko w czasie pojedynku |
 | Wygląd postaci (31.10.2026) | czarny obrys jak w tle; „stoi” = pierwsza klatka strzału (bokiem, ręka przy kaburze), bez animacji oddechu |
 | Sygnał | dzwon + napis „FIRE!” (gra działa też bez dźwięku) |
 | Napięcie przed sygnałem | muzyka cichnie, zostaje wiatr; toczący się krzak |

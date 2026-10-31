@@ -14,6 +14,7 @@ func _ready():
 	for label in [$Message, $Info]:
 		label.add_theme_constant_override("outline_size", 10)
 		label.add_theme_color_override("font_outline_color", Color.BLACK)
+	Music.fade_out()
 	show_score()
 	$Message.text = "Ready..."
 	await get_tree().create_timer(randf_range(2.0, 6.0)).timeout
@@ -60,6 +61,7 @@ func _process(_delta):
 
 func end_round(text, winner):
 	state = "done"
+	music_back()
 	if winner == "left":
 		left_score += 1
 		shoot($Left, $Right)
@@ -79,6 +81,13 @@ func shoot(winner, loser):
 	tween.tween_property(winner, "frame", 4, 0.25).from(1)
 	tween.tween_property(loser, "frame", 8, 0.4).from(5)
 	tween.tween_property(loser, "frame", 15, 1.5).from(9)
+
+# Po strzale: 1,5 s ciszy na echo, potem muzyka wraca, a wiatr cichnie.
+func music_back():
+	Music.fade_in(1.5)
+	var tween = create_tween()
+	tween.tween_interval(1.5)
+	tween.tween_property($Wind, "volume_db", -60.0, 1.0)
 
 func match_over():
 	return left_score == WINS_NEEDED or right_score == WINS_NEEDED

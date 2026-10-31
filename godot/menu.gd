@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	Music.fade_in()
+
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_1 or event.keycode == KEY_KP_1:

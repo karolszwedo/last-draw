@@ -22,6 +22,7 @@ func _ready():
 	for label in [$Message, $Info]:
 		label.add_theme_constant_override("outline_size", 10)
 		label.add_theme_color_override("font_outline_color", Color.BLACK)
+	Music.fade_out()
 	load_best()
 	show_info()
 	$Message.text = "Ready..."
@@ -85,15 +86,24 @@ func shoot(winner, loser):
 	tween.tween_property(loser, "frame", 8, 0.4).from(5)
 	tween.tween_property(loser, "frame", 15, 1.5).from(9)
 
+# Po strzale: 1,5 s ciszy na echo, potem muzyka wraca, a wiatr cichnie.
+func music_back():
+	Music.fade_in(1.5)
+	var tween = create_tween()
+	tween.tween_interval(1.5)
+	tween.tween_property($Wind, "volume_db", -60.0, 1.0)
+
 func show_info():
 	$Info.text = "%s (%d/5)    Lives: %d    %s\n\"%s\"" % [ENEMY_NAMES[enemy_index], enemy_index + 1, lives, best_text(), ENEMY_LINES[enemy_index]]
 
 func end_round(text):
 	state = "done"
+	music_back()
 	$Message.text = text + "\n[R] continue"
 
 func end_game(title, detail):
 	state = "done"
+	music_back()
 	$Info.text = detail + "\n" + best_text()
 	$Message.text = title + "\n[R] play again\n[Esc] menu"
 
