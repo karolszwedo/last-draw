@@ -40,7 +40,7 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 - [x] Tło ulicy i stojące postacie w trybie 1 gracza (w miejsce prostokątów).
 - [x] Animacja strzału i padania zamiast znikania (1 gracz), płaska kałuża.
-- [ ] To samo w trybie 2 graczy.
+- [x] To samo w trybie 2 graczy.
 - [ ] Dzwon, strzał, wiatr; muzyka cichnie przed sygnałem.
 - [ ] Toczący się krzak w czasie czekania.
 

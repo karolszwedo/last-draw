@@ -11,6 +11,9 @@ var left_pressed = false
 var right_pressed = false
 
 func _ready():
+	for label in [$Message, $Info]:
+		label.add_theme_constant_override("outline_size", 10)
+		label.add_theme_color_override("font_outline_color", Color.BLACK)
 	show_score()
 	$Message.text = "Ready..."
 	await get_tree().create_timer(randf_range(2.0, 6.0)).timeout
@@ -58,15 +61,22 @@ func end_round(text, winner):
 	state = "done"
 	if winner == "left":
 		left_score += 1
-		$Right.hide()
+		shoot($Left, $Right)
 	elif winner == "right":
 		right_score += 1
-		$Left.hide()
+		shoot($Right, $Left)
 	show_score()
 	if match_over():
 		$Message.text = text + "\n%s WINS THE MATCH!\n[R] new match    [Esc] menu" % winner.to_upper()
 	else:
 		$Message.text = text + "\n[R] next round"
+
+# Klatki w kowboj.png: 0 = stoi, 1-4 = strzela, 5-8 = pada, 9-15 = rośnie kałuża.
+func shoot(winner, loser):
+	var tween = create_tween()
+	tween.tween_property(winner, "frame", 4, 0.25).from(1)
+	tween.tween_property(loser, "frame", 8, 0.4).from(5)
+	tween.tween_property(loser, "frame", 15, 1.5).from(9)
 
 func match_over():
 	return left_score == WINS_NEEDED or right_score == WINS_NEEDED
