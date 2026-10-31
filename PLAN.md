@@ -58,6 +58,6 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
       Paczka na itch.io: `export/last-draw-web.zip` (index.html w środku, poza gitem).
 - [x] Strona na itch.io jako Draft (31.10.2026): charlesonthewave.itch.io/last-draw — opis, okładka, tagi,
       okno 1152×648; gra uruchamia się na stronie. Teksty i decyzje w `ITCH.md`.
-- [ ] 3–5 zrzutów ekranu na stronę itch.io.
+- [x] 3 zrzuty ekranu (F12 z Godota, `zrzuty.gd`) w `materialy/zrzuty/`.
 - [ ] README w repo.
 - [ ] Publikacja (Draft → Public) — kiedy Karol zdecyduje.

@@ -72,4 +72,4 @@ np. „Built with help from an AI coding assistant.” Rekruter i tak może zapy
 ## Później (przed publikacją)
 
 - [x] Okładka 630 × 500: `materialy/okladka.png` (z przepisu `sklej_grafike.py`).
-- 3–5 zrzutów ekranu z gry.
+- [x] 3 zrzuty ekranu: `materialy/zrzuty/` (F12 w grze uruchomionej z Godota, `zrzuty.gd`).

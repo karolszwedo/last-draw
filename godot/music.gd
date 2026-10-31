@@ -10,6 +10,9 @@ const SILENT = -60.0   # praktycznie cisza
 var fade_tween
 
 func _ready():
+	# Przy okazji: F12 = zrzut ekranu (tylko przy uruchamianiu z Godota, patrz zrzuty.gd).
+	# Podpinamy go tutaj, bo Music i tak działa w całej grze, więc nie trzeba drugiego autoloadu.
+	add_child(load("res://zrzuty.gd").new())
 	stream = load("res://assets/muzyka/lassolady.ogg")
 	stream.loop = true
 	volume_db = LOUD
