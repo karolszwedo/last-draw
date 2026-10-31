@@ -38,8 +38,8 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 ## Etap 5 — grafika i dźwięk
 
-- [ ] Tło ulicy i stojące postacie w trybie 1 gracza (w miejsce prostokątów).
-- [ ] Animacja strzału i padania zamiast znikania (1 gracz).
+- [x] Tło ulicy i stojące postacie w trybie 1 gracza (w miejsce prostokątów).
+- [x] Animacja strzału i padania zamiast znikania (1 gracz), płaska kałuża.
 - [ ] To samo w trybie 2 graczy.
 - [ ] Dzwon, strzał, wiatr; muzyka cichnie przed sygnałem.
 - [ ] Toczący się krzak w czasie czekania.
