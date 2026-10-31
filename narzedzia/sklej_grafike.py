@@ -154,3 +154,100 @@ print('krzak: dół w klatce y =', dol, '-> pozycja y w grze =', 3 * G + 3 - 3 *
 
 stopy = wszystkie[0].getbbox()[3]
 print('kowboj: dół postaci w klatce y =', stopy, '-> pozycja y w grze =', 3 * G + 3 - 3 * (stopy - 32))
+
+# ================= ekran tytułowy (31.10.2026) =================
+# Trzy warstwy tła do przesuwania z różną prędkością (paralaksa), napis i opcje w pikselach.
+from PIL import ImageFont
+
+T = ASSETS + 'tytul/'
+KROJE = 'narzedzia/kroje/'
+import os
+os.makedirs(T, exist_ok=True)
+NIEBO = skaly.getpixel((0, 0))
+
+def wytnij_dom(box):
+    # dom z przykładowej ulicy; niebo i białe pasy wokół robimy przezroczyste
+    s = ulica.crop(box); w, h = s.size
+    tlo_kolory = {(156, 221, 255), (255, 255, 255)}
+    stos = [(x, 0) for x in range(w)] + [(x, y) for y in range(h) for x in (0, w - 1)]; byly = set()
+    while stos:
+        x, y = stos.pop()
+        if (x, y) in byly or not (0 <= x < w and 0 <= y < h):
+            continue
+        byly.add((x, y))
+        if s.getpixel((x, y))[:3] in tlo_kolory:
+            s.putpixel((x, y), (0, 0, 0, 0)); stos += [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
+    return s
+
+# warstwa daleka: niebo + skały (128 px szerokości, w grze powtarzana w kółko)
+daleko = Image.new('RGBA', (skaly.width, H), NIEBO)
+daleko.paste(skaly, (0, G - skaly.height), skaly)
+daleko.save(T + 'daleko.png')
+
+# warstwa środkowa: same kaktusy
+srodek = Image.new('RGBA', (kaktusy.width, H), (0, 0, 0, 0))
+srodek.paste(kaktusy, (0, G - kaktusy.height + 2), kaktusy)
+srodek.save(T + 'srodek.png')
+
+# warstwa bliska: sklep, saloon, bank, ziemia i piasek (768 px, też powtarzana)
+blisko = Image.new('RGBA', (768, H), (0, 0, 0, 0))
+for box, x in (((8, 60, 88, 137), 40), ((191, 56, 286, 153), 300), ((392, 84, 504, 161), 560)):
+    dom = wytnij_dom(box)
+    blisko.paste(dom, (x, G - dom.height + 1), dom)
+for x in range(0, blisko.width, pas.width):
+    blisko.paste(pas, (x, G), pas)
+for y in range(G + pas.height, H):
+    for x in range(blisko.width):
+        blisko.putpixel((x, y), (245, 132, 79, 255))
+blisko.save(T + 'blisko.png')
+
+def maska_tekstu(tekst, kroj, rozmiar):
+    f = ImageFont.truetype(KROJE + kroj, rozmiar)
+    l, t, r, b = f.getbbox(tekst)
+    m = Image.new('L', (r - l + 2, b - t + 2), 0)
+    d = ImageDraw.Draw(m); d.fontmode = '1'          # bez wygładzania = ostre piksele
+    d.text((1 - l, 1 - t), tekst, font=f, fill=255)
+    return m
+
+def napis_tytulowy(tekst, kroj, szer=300, wys=40):
+    rozmiar = 10                                     # największy rozmiar, który mieści się w szer x wys
+    while True:
+        bb = ImageFont.truetype(KROJE + kroj, rozmiar + 1).getbbox(tekst)
+        if bb[2] - bb[0] > szer or bb[3] - bb[1] > wys:
+            break
+        rozmiar += 1
+    m = maska_tekstu(tekst, kroj, rozmiar); w, h = m.size; px = m.load()
+    def pelne(x, y): return 0 <= x < w and 0 <= y < h and px[x, y] > 0
+    out = Image.new('RGBA', (w + 4, h + 5), (0, 0, 0, 0))
+    for y in range(-2, h + 3):                       # cień: ciemny brąz, 2 piksele niżej
+        for x in range(-2, w + 2):
+            if pelne(x, y - 3): out.putpixel((x + 2, y + 2), (93, 59, 25, 255))
+    for y in range(-1, h + 1):                       # czarny obrys
+        for x in range(-1, w + 1):
+            if not pelne(x, y) and any(pelne(x + dx, y + dy) for dx in (-1, 0, 1) for dy in (-1, 0, 1)):
+                out.putpixel((x + 2, y + 2), (0, 0, 0, 255))
+    for y in range(h):                               # kolory: piasek u góry, pomarańcz na dole
+        a = y / max(1, h - 1)
+        kol = (255, 217, 135) if a < 0.45 else ((248, 177, 65) if a < 0.75 else (245, 132, 79))
+        for x in range(w):
+            if pelne(x, y): out.putpixel((x + 2, y + 2), kol + (255,))
+    return out
+
+def napis_maly(tekst):
+    m = maska_tekstu(tekst, 'Silkscreen-Regular.ttf', 8); w, h = m.size; px = m.load()
+    out = Image.new('RGBA', (w + 2, h + 2), (0, 0, 0, 0))
+    for y in range(-1, h + 1):
+        for x in range(-1, w + 1):
+            if any(0 <= x + dx < w and 0 <= y + dy < h and px[x + dx, y + dy] for dx in (-1, 0, 1) for dy in (-1, 0, 1)):
+                out.putpixel((x + 1, y + 1), (0, 0, 0, 255))
+    for y in range(h):
+        for x in range(w):
+            if px[x, y]: out.putpixel((x + 1, y + 1), (255, 255, 255, 255))
+    return out
+
+logo = napis_tytulowy('LAST DRAW', 'Rye-Regular.ttf')
+logo.save(T + 'napis.png')
+opcje = napis_maly('[1] 1 PLAYER     [2] 2 PLAYERS')
+opcje.save(T + 'opcje.png')
+print('ekran tytułowy: napis', logo.size, '-> pozycja', (576, 3 * 28 + 3 * logo.height // 2),
+      '| opcje', opcje.size, '-> pozycja', (576, 3 * 192 + 3 * opcje.height // 2))

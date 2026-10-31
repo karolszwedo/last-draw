@@ -46,6 +46,12 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 - [x] Muzyka w tle (autoload `Music`), cichnie przed sygnałem; po strzale wraca, a wiatr cichnie.
 - [x] Toczący się krzak w czasie czekania (własny rysunek, `krzak.gd`).
 
+## Etap 5b — ekran tytułowy (dopisany 31.10.2026)
+
+- [x] Podgląd: ruchome tło + napis w 3 krojach; wybrany Rye.
+- [x] Ruchome tło ulicy w menu (paralaksa, `tlo_tytulowe.gd`), słońce, krzak wraca co jakiś czas.
+- [x] Napis „LAST DRAW” i migające opcje.
+
 ## Etap 6 — wydanie
 
 - [ ] Eksport do przeglądarki (Web) i test.

@@ -18,6 +18,7 @@ Cel nauki: przejść cały cykl gry od GDD do wydania na itch.io; nauczyć się 
 | Grafika | 2D, pixel art z gotowej darmowej paczki |
 | Paczki (31.10.2026) | kowboj LinkNinja (obaj gracze ten sam, lewy odbity) + tło YEEHAW!; szczegóły w `ASSETY.md` |
 | Kadr (31.10.2026) | spokojny: niebo, skały, kaktusy, **saloon pośrodku**, kowboje po bokach; pas piasku na dole na napisy. Bez półek i drabin z przykładowej ulicy (za dużo na ekranie) |
+| Nazwa (31.10.2026) | zostaje **Last Draw**. Na itch.io brak gry o tym tytule; na Steamie zapowiedziana karcianka „The Last Draw”. Przed ewentualną sprzedażą sprawdzić znaki towarowe w TMview |
 | Dźwięk (31.10.2026) | styl **retro 8-bit**: własne efekty (dzwon „dzyń”, strzał z echem, wiatr z gwizdem) + muzyka „Lasso Lady”. Muzyka gra w menu, cichnie przy „Ready…”, wraca po strzale; wiatr tylko w czasie pojedynku |
 | Wygląd postaci (31.10.2026) | czarny obrys jak w tle; „stoi” = pierwsza klatka strzału (bokiem, ręka przy kaburze), bez animacji oddechu |
 | Sygnał | dzwon + napis „FIRE!” (gra działa też bez dźwięku) |
@@ -55,7 +56,8 @@ Cel nauki: przejść cały cykl gry od GDD do wydania na itch.io; nauczyć się 
 
 ## W pierwszej wersji
 
-- ekran startowy z wyborem: 1 gracz / 2 graczy,
+- ekran startowy z wyborem: 1 gracz / 2 graczy — jako ekran tytułowy: ruchome tło ulicy (paralaksa),
+  napis „LAST DRAW” w westernowym kroju w pikselach, migające opcje (dopisane 31.10.2026, decyzja Karola),
 - pojedynek z losową pauzą, falstartem i czasem reakcji,
 - tryb 1 gracza: 5 przeciwników, ekran wygranej i przegranej, rekord,
 - tryb 2 graczy: do 3 wygranych,
