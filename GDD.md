@@ -16,6 +16,9 @@ Cel nauki: przejść cały cykl gry od GDD do wydania na itch.io; nauczyć się 
 | Co | Decyzja |
 |---|---|
 | Grafika | 2D, pixel art z gotowej darmowej paczki |
+| Paczki (31.10.2026) | kowboj LinkNinja (obaj gracze ten sam, lewy odbity) + tło YEEHAW!; szczegóły w `ASSETY.md` |
+| Kadr (31.10.2026) | spokojny: niebo, skały, kaktusy, **saloon pośrodku**, kowboje po bokach; pas piasku na dole na napisy. Bez półek i drabin z przykładowej ulicy (za dużo na ekranie) |
+| Wygląd postaci (31.10.2026) | czarny obrys jak w tle; „stoi” = pierwsza klatka strzału (bokiem, ręka przy kaburze), bez animacji oddechu |
 | Sygnał | dzwon + napis „FIRE!” (gra działa też bez dźwięku) |
 | Napięcie przed sygnałem | muzyka cichnie, zostaje wiatr; toczący się krzak |
 | Tryby | 1 gracz vs komputer **i** 2 graczy na jednej klawiaturze |

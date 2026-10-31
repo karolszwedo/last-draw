@@ -7,7 +7,8 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 - [x] Prywatne repo na GitHubie (`karolszwedo/last-draw`), Git LFS na grafikę i dźwięk.
 - [x] Projekt Godota w `godot\`, renderer **Kompatybilny** (żeby działało w przeglądarce).
-- [ ] Wybór paczki pixel art (postacie + tło westernu) i dźwięków → wpis do `ASSETY.md`.
+- [x] Wybór paczki pixel art (postacie + tło westernu) → wpis do `ASSETY.md` (31.10.2026).
+- [ ] Wybór dźwięków (dzwon, strzał, wiatr, muzyka) → wpis do `ASSETY.md`.
 
 ## Etap 1 — rdzeń pojedynku (szare prostokąty)
 
@@ -37,7 +38,9 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 ## Etap 5 — grafika i dźwięk
 
-- [ ] Tło ulicy i postacie z paczki pixel art (stoi / strzela / pada).
+- [ ] Tło ulicy i stojące postacie w trybie 1 gracza (w miejsce prostokątów).
+- [ ] Animacja strzału i padania zamiast znikania (1 gracz).
+- [ ] To samo w trybie 2 graczy.
 - [ ] Dzwon, strzał, wiatr; muzyka cichnie przed sygnałem.
 - [ ] Toczący się krzak w czasie czekania.
 

@@ -1,23 +1,29 @@
 [gd_scene format=3 uid="uid://d2ffpintj8j4x"]
 
 [ext_resource type="Script" uid="uid://c1l61mrh1vt7t" path="res://duel.gd" id="1_qus8e"]
+[ext_resource type="Texture2D" uid="uid://b6lwf0wgex3lg" path="res://assets/kowboj.png" id="2_rsfa2"]
+[ext_resource type="Texture2D" uid="uid://c8nv0hnt5xab" path="res://assets/tlo_ulica.png" id="3_j65gr"]
 
 [node name="Duel" type="Node2D" unique_id=620716475]
 script = ExtResource("1_qus8e")
 
-[node name="Player" type="ColorRect" parent="." unique_id=1367048893]
-offset_left = 200.0
-offset_top = 300.0
-offset_right = 260.0
-offset_bottom = 420.0
-color = Color(0, 0, 1, 1)
+[node name="Background" type="Sprite2D" parent="." unique_id=1264357319]
+scale = Vector2(3, 3)
+texture = ExtResource("3_j65gr")
+centered = false
 
-[node name="Enemy" type="ColorRect" parent="." unique_id=862564161]
-offset_left = 890.0
-offset_top = 300.0
-offset_right = 950.0
-offset_bottom = 420.0
-color = Color(0.73301166, 0, 0, 1)
+[node name="Player" type="Sprite2D" parent="." unique_id=1039584557]
+position = Vector2(240, 459)
+scale = Vector2(3, 3)
+texture = ExtResource("2_rsfa2")
+flip_h = true
+hframes = 12
+
+[node name="Enemy" type="Sprite2D" parent="." unique_id=77209241]
+position = Vector2(912, 459)
+scale = Vector2(3, 3)
+texture = ExtResource("2_rsfa2")
+hframes = 12
 
 [node name="Message" type="Label" parent="." unique_id=749100797]
 offset_left = 480.0

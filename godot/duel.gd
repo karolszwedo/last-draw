@@ -19,6 +19,9 @@ var state = "ready"
 var best = 0.0
 
 func _ready():
+	for label in [$Message, $Info]:
+		label.add_theme_constant_override("outline_size", 10)
+		label.add_theme_color_override("font_outline_color", Color.BLACK)
 	load_best()
 	show_info()
 	$Message.text = "Ready..."

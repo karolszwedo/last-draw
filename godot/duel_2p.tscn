@@ -1,33 +1,33 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://cdi4f0o80d0cq"]
 
-[ext_resource type="Script" path="res://duel_2p.gd" id="1_duel2p"]
+[ext_resource type="Script" uid="uid://br4u4ddb8npd6" path="res://duel_2p.gd" id="1_duel2p"]
 
-[node name="Duel2P" type="Node2D"]
+[node name="Duel2P" type="Node2D" unique_id=709927408]
 script = ExtResource("1_duel2p")
 
-[node name="Left" type="ColorRect" parent="."]
+[node name="Left" type="ColorRect" parent="." unique_id=1220839170]
 offset_left = 200.0
 offset_top = 300.0
 offset_right = 260.0
 offset_bottom = 420.0
 color = Color(0, 0, 1, 1)
 
-[node name="Right" type="ColorRect" parent="."]
+[node name="Right" type="ColorRect" parent="." unique_id=1122658069]
 offset_left = 890.0
 offset_top = 300.0
 offset_right = 950.0
 offset_bottom = 420.0
 color = Color(0.73301166, 0, 0, 1)
 
-[node name="Message" type="Label" parent="."]
+[node name="Message" type="Label" parent="." unique_id=191149297]
 offset_top = 60.0
 offset_right = 1152.0
 offset_bottom = 280.0
 theme_override_font_sizes/font_size = 48
-horizontal_alignment = 1
 text = "Ready..."
+horizontal_alignment = 1
 
-[node name="Info" type="Label" parent="."]
+[node name="Info" type="Label" parent="." unique_id=187815677]
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 60.0
