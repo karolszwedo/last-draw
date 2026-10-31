@@ -54,8 +54,6 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 
 ## Etap 6 — wydanie
 
-- [ ] Eksport do przeglądarki (Web) i test. Folder `export\web` gotowy (poza gitem). Do wyklikania przez Karola:
-      Edytor → Zarządzaj szablonami eksportu → Pobierz i zainstaluj (ok. 1 GB, raz); Projekt → Eksportuj →
-      Dodaj → Web, Ścieżka eksportu `../export/web/index.html`, Thread Support wyłączone; Wyeksportuj projekt
-      bez debugowania. Potem test w Chrome przez lokalny serwer.
+- [x] Eksport do przeglądarki (Web) i test w Chrome (31.10.2026): działa, dźwięk OK, proporcje keep.
+      Paczka na itch.io: `export/last-draw-web.zip` (index.html w środku, poza gitem).
 - [ ] Strona na itch.io (widoczność decyduje Karol), README w repo.
