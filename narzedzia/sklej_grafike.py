@@ -251,3 +251,28 @@ opcje = napis_maly('[1] 1 PLAYER     [2] 2 PLAYERS')
 opcje.save(T + 'opcje.png')
 print('ekran tytułowy: napis', logo.size, '-> pozycja', (576, 3 * 28 + 3 * logo.height // 2),
       '| opcje', opcje.size, '-> pozycja', (576, 3 * 192 + 3 * opcje.height // 2))
+
+# ================= okładka na itch.io (31.10.2026) =================
+# 315x250, powiększona 2x = 630x500 (rozmiar zalecany przez itch.io).
+os.makedirs('materialy', exist_ok=True)
+OW, OH, OG = 315, 250, 200
+okl = Image.new('RGBA', (OW, OH), NIEBO)
+for x in range(0, OW, skaly.width):
+    okl.paste(skaly, (x, OG - skaly.height), skaly)
+for x in range(0, OW, kaktusy.width):
+    okl.paste(kaktusy, (x, OG - kaktusy.height + 2), kaktusy)
+sal = wytnij_dom((191, 56, 286, 153))
+okl.paste(sal, ((OW - sal.width) // 2, OG - sal.height + 1), sal)
+for x in range(0, OW, pas.width):
+    okl.paste(pas, (x, OG), pas)
+for y in range(OG + pas.height, OH):
+    for x in range(OW):
+        okl.putpixel((x, y), (245, 132, 79, 255))
+stoi = wszystkie[0]                                   # kowboj stoi (z obrysem), patrzy w lewo
+okl.paste(stoi.transpose(Image.FLIP_LEFT_RIGHT), (58 - 32, OG - 55), stoi.transpose(Image.FLIP_LEFT_RIGHT))
+okl.paste(stoi, (257 - 32, OG - 55), stoi)
+kz = pasek.crop((16, 0, 32, 16))
+okl.paste(kz, (205, OG - 15), kz)
+okl.paste(logo, ((OW - logo.width) // 2, 16), logo)
+okl.resize((OW * 2, OH * 2), Image.NEAREST).save('materialy/okladka.png')
+print('okładka: materialy/okladka.png', (OW * 2, OH * 2))
