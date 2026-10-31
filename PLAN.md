@@ -59,6 +59,6 @@ Najpierw cała gra na szarych prostokątach, grafika i dźwięk na końcu (etap 
 - [x] Strona na itch.io jako Draft (31.10.2026): charlesonthewave.itch.io/last-draw — opis, okładka, tagi,
       okno 1152×648; gra uruchamia się na stronie. Teksty i decyzje w `ITCH.md`.
 - [x] 3 zrzuty ekranu (F12 z Godota, `zrzuty.gd`) w `materialy/zrzuty/`.
-- [ ] README w repo.
+- [x] README w repo (31.10.2026, po angielsku): opis, zrzuty, link do itch.io, jak działa, autorzy.
 - [x] Publikacja: strona **publiczna** od 31.10.2026 — https://charlesonthewave.itch.io/last-draw
       (sprawdzona z zewnątrz: opis, 3 zrzuty, tagi, „Run game”, etykieta „AI Assisted”).
